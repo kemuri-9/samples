@@ -1,0 +1,4 @@
+rootProject.name = 'net.kemuri9.samples'
+
+include ':ds-annotations'
+project(':ds-annotations').projectDir = "${rootProject.projectDir}/ds-annotations" as File

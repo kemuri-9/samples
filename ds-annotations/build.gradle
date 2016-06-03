@@ -1,0 +1,31 @@
+// need to utilize this plugin to support the OSGI R6/DS 1.3 annotations generating the associated XMLs
+plugins {
+  /* 0.8.3 upgrades from bnd 3.1 to 3.2, which fixes an issue in the @Designate annotation,
+   * but not using it as maven-bundle-plugin has not yet released 3.1.0 which also upgrades to 3.2
+   * otherwise would require different code for gradle vs maven version */
+  id "org.dm.bundle" version "0.8.2"
+}
+
+apply plugin: 'java'
+
+version = '1.0.0'
+jar.baseName = 'samples-ds-annotations'
+project.description = 'Exemplify usage of OSGi R6 Annotations'
+
+dependencies {
+    compileOnly 'org.osgi:org.osgi.service.component.annotations:1.3.0'
+    compileOnly 'org.osgi:org.osgi.service.metatype.annotations:1.3.0'
+    compileOnly 'org.osgi:osgi.annotation:6.0.1'
+
+    compile 'org.osgi:osgi.core:6.0.0'
+    compile 'org.osgi:osgi.cmpn:6.0.0'
+}
+
+sourceSets.main.resources {
+    srcDir file('..') include 'LICENSE'
+}
+
+bundle {
+    instruction 'Export-Package', '!*.impl, net.kemuri9.*'
+    instruction 'Bundle-Name', 'Sample DS Annotation Usage'
+}
