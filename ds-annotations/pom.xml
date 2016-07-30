@@ -29,9 +29,7 @@
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
-                <!-- must be >= 3.0.x to use a version of bnd that supports OSGi R6 annotations -->
-                <!-- 3.1.0 upgrades bnd to 3.2 which fixes the @Designate issue, but not released as of 2016-05-23 -->
-                <version>3.0.1</version>
+                <version>3.2.0</version>
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>

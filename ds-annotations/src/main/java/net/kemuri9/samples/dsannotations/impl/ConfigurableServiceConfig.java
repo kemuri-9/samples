@@ -14,10 +14,7 @@ import net.kemuri9.samples.dsannotations.EnumOption;
  */
 @ObjectClassDefinition(name = "%net.kemuri9.samples.dsannotations.impl.ConfigurableServiceImpl.name",
 	description = "%net.kemuri9.samples.dsannotations.impl.ConfigurableServiceImpl.description",
-	id = "net.kemuri9.samples.dsannotations.impl.ConfigurableServiceImpl",
-	/* Bug in bnd < 3.2, in needing to specify the pid that this metatype applies to as the
-	 * @Designate isn't doing this as it should automatically */
-	pid = {"net.kemuri9.samples.dsannotations.impl.ConfigurableServiceImpl"}
+	id = "net.kemuri9.samples.dsannotations.impl.ConfigurableServiceImpl"
 )
 @interface ConfigurableServiceConfig {
 
