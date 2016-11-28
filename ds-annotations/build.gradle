@@ -17,6 +17,7 @@ dependencies {
 
     compile 'org.osgi:osgi.core:6.0.0'
     compile 'org.osgi:osgi.cmpn:6.0.0'
+    compile 'javax.servlet:javax.servlet-api:3.0.1'
 }
 
 sourceSets.main.resources {
